@@ -83,7 +83,7 @@ function ik_ccd (target, theta)
 			theta[i] = CLAMP (theta[i], axes[i].limits.x, axes[i].limits.y)
       
 			fk (theta, joints);
-			end.copy(joints[2]);
+			end.copy(joints[joints.length-1]);  // was a bug ... by setting joints[2]
 
 			if (end.distanceTo (target) < eps) {
 				return 1;
