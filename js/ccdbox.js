@@ -55,7 +55,7 @@ function ik_ccd (target, theta)
 	for (var i = 0; i <= njoints; i++) joints[i]=new THREE.Vector3();
 	
 	fk (theta, joints);
-	end.copy (joints[joints.length-1]]);
+	end.copy (joints[joints.length-1]);
 	
 	// convergence
 	var eps = 1e-1, MAXITER = 20;
