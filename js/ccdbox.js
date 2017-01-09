@@ -87,7 +87,7 @@ function ik_ccd (target, theta)
 			var dotV = t_end.dot(t_target);
 			var angle = Math.acos (CLAMP(dotV, -1,1));
 			tmpV.crossVectors (t_end, t_target);
-			var sign =  (tmpV.dot (new THREE.Vector3(0,1,0)) > 0) ? 1: -1;
+			var sign =  (tmpV.dot (axis) > 0) ? 1: -1;
 			theta[i] += sign * angle;
 			
 			// joint limit [-2.4, -0.1]
