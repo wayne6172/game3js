@@ -91,7 +91,7 @@ function ik_ccd (target, theta)
 			theta[i] += sign * angle;
 			
 			// joint limit [-2.4, -0.1]
-			theta[i] = CLAMP (theta[i], axes[i].limits[0], axes[i].limits[1])
+			theta[i] = CLAMP (theta[i], axes[i].limits.x, axes[i].limits.y)
 		
 			fk (theta, joints);
 			end.copy(joints[joints.length-1]);
