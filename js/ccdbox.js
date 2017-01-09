@@ -35,6 +35,14 @@ function proj2plane (p, n)
 
 //var axes = [];
 
+function CLAMP (x, xlo, xhi) {
+	if (x < xlo)
+			return xlo;
+	if (x > xhi)
+			return xhi;
+	return x;
+}
+
 function ik_ccd (target, theta)
 {
 	var end = new THREE.Vector3();
